@@ -1,25 +1,32 @@
 <template>
   <div class="tab-bar">
     <div class="tab-bar-item">
-      <div>图片</div>
+      <img src="@/assets/img/tabbar/home.svg">
       <span class="text">首页</span>
     </div>
     <div class="tab-bar-item">
-      <div>图片</div>
+      <img src="@/assets/img/tabbar/category.svg">
       <span class="text">收藏</span>
     </div>
     <div class="tab-bar-item">
-      <div>图片</div>
+      <img src="@/assets/img/tabbar/shopcart.svg">
       <span class="text">订单</span>
     </div>
     <div class="tab-bar-item">
-      <div>图片</div>
+      <img src="@/assets/img/tabbar/profile.svg">
       <span class="text">消息</span>
     </div>
   </div>
 </template>
 <script setup>
-
+const tabbarData = [
+  {
+    text:'首页',
+    image:"@/assets/img/tabbar/home.svg",
+    imageActive:"@/assets/img/tabbar/home_active.svg",
+    path:"/home"
+  }
+]
 </script>
 <style lang="less" scoped>
   .tab-bar{
