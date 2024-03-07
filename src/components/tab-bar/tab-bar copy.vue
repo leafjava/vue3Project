@@ -1,36 +1,24 @@
 <template>
   <div class="tab-bar">
-    <template v-for="(item, index) in tabbarData" :key="index">
-      <div class="tab-bar-item" 
-        :class="{active:currentIndex == index}"
-        @click="itemClick(index, item)"
-        >
-        <img v-if="currentIndex !== index" :src="getAssetURL(item.image)">
-        <img v-else :src="getAssetURL(item.imageActive)">
-        <span class="text">{{ item.text }}</span>
-      </div>
-    </template>
+    <div class="tab-bar-item" @click="itemClick('/home')">
+      <!-- <img src="@/assets/img/tabbar/home.svg">
+      <span class="text">首页</span> -->
+    </div>
+    <div class="tab-bar-item">
+      <img src="@/assets/img/tabbar/category.svg">
+      <span class="text">收藏</span>
+    </div>
+    <div class="tab-bar-item">
+      <img src="@/assets/img/tabbar/shopcart.svg">
+      <span class="text">订单</span>
+    </div>
+    <div class="tab-bar-item">
+      <img src="@/assets/img/tabbar/profile.svg">
+      <span class="text">消息</span>
+    </div>
   </div>
 </template>
 <script setup>
-import tabbarData from "@/assets/data/tabbar.js"
-import { getAssetURL } from "@/utils/load_assets.js"
-import {ref} from 'vue'
-import {useRouter} from 'vue-router'
-
-const currentIndex = ref(0)
-const router = useRouter()
-const itemClick = (index, item) => {
-  currentIndex.value = index
-  router.push(item.path)
-}
-
-// const getAssetURL = (image) => {
-//   // 参数一:相对路径
-//   // 参数二:当前路径URL
-//   return new URL(`../../assets/img/${image}`, import.meta.url).href
-// }
-
 // const tabbarData = [
 //   {
 //     text:'首页',
@@ -76,10 +64,6 @@ const itemClick = (index, item) => {
     flex-direction:column;
     justify-content:center;
     align-items:center;
-
-    &.active{
-      color: var(--primary-color);
-    }
 
     .text{
       font-size:12px;
