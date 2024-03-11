@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 
-import TabBar from "@/components/tab-bar/tab-bar.vue"
+import TabBar from "@/components/tab-bar/tab-bar copy 2.vue"
 </script>
 
 <template>
