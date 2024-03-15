@@ -6,8 +6,8 @@ import TabBar from "@/components/tab-bar/tab-bar copy 2.vue"
 
 import {useRouter, useRoute} from 'vue-router'
 const router = useRouter()
-const route = useRoute()
-console.log(route.meta.hideTabbar)
+// const route = useRoute()
+// console.log(route.meta.hideTabbar)
 </script>
 
 <template>
@@ -16,7 +16,8 @@ console.log(route.meta.hideTabbar)
   <router-link to="/favor">收藏</router-link>
   <router-link to="/order">订单</router-link>
   <router-link to="/message">消息</router-link> -->
-  <TabBar v-if="!route.meta.hideTabbar"></TabBar>
+  <!-- <TabBar v-if="!route.meta.hideTabbar"></TabBar> -->
+  <TabBar></TabBar>
 </template>
 
 <style scoped>

@@ -40,9 +40,9 @@ const router = createRouter({
       path:'/city',
       name:'city',
       component:() => import('../views/city/city.vue'),
-      meta:{
-        hideTabbar:true
-      }
+      // meta:{
+      //   hideTabbar:true
+      // }
     }
   ]
 })
